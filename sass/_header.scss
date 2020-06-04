@@ -1,9 +1,15 @@
 
 .visually-hidden {
   position: absolute;
-  clip: rect(0 0 0 0);
+  visibility: hidden;
   width: 1px;
   height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+  z-index: -1;
 }
 
 .header {
@@ -43,6 +49,7 @@
   flex: 0 0 90%;
   a {
     text-decoration: none;
+    color: #212353;
   }
   li {
     padding: 15px 0;
@@ -158,7 +165,6 @@
   background-color: #fff;
   box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.15);
   z-index: 5;
-   
 }
 
 .nav__burger {
@@ -185,7 +191,11 @@
     width: 100%;
     border-bottom: 0px solid #d6b9ff;
   }
+  a {
+    color: #212353;
+  }
 }
+
 
 
 
@@ -278,6 +288,7 @@
     font-weight: normal;
     font-size: 25px;
     line-height: 277%;
+    color: #212353;
   }
 }
 
@@ -310,6 +321,7 @@
     color: #ffffff;
     transition: all .4s ease;
 }
+
 //  логотип  //
 
 .logo {
@@ -335,7 +347,6 @@
   line-height: 160%;
   color: #ffffff;
   transition: all .4s ease;
-
 }
 
 
@@ -359,6 +370,8 @@
   cursor: pointer;
   outline: none;
   background: url(../img/menu-burger.png);
+  // background-repeat: no-repeat;
+  // background-size: cover;
   background-size: 100%;
 
 }

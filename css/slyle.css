@@ -321,7 +321,7 @@ template {
   padding: 0 0px;
 }
 
-h1, h2 {
+h1, h2, h3 {
   margin: 0;
   font-family: 'Dosis', sans-serif;
   color: #000;
@@ -350,9 +350,15 @@ ul, li {
 
 .visually-hidden {
   position: absolute;
-  clip: rect(0 0 0 0);
+  visibility: hidden;
   width: 1px;
   height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+  z-index: -1;
 }
 
 .header {
@@ -410,6 +416,7 @@ ul, li {
 
 .nav a {
   text-decoration: none;
+  color: #212353;
 }
 
 .nav li {
@@ -551,6 +558,10 @@ ul, li {
   border-bottom: 0px solid #d6b9ff;
 }
 
+.nav__burger a {
+  color: #212353;
+}
+
 .nav__burger > li {
   min-height: 83px;
   font-style: normal;
@@ -632,6 +643,7 @@ ul, li {
   font-weight: normal;
   font-size: 25px;
   line-height: 277%;
+  color: #212353;
 }
 
 .btn__nav-burger {
@@ -1507,6 +1519,9 @@ ul, li {
   .burger__clivk {
     display: block;
   }
+  .popup__contant h3 {
+    font-size: 20px;
+  }
 }
 
 @media (max-width: 992px) {
@@ -1728,6 +1743,9 @@ ul, li {
   .dots {
     left: 266px;
     bottom: 119px;
+  }
+  .popup__contant h3 {
+    margin-bottom: 20px;
   }
 }
 
