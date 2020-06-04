@@ -1,0 +1,382 @@
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+}
+
+.header {
+  width: 100%;
+  height: 90px;
+
+}
+
+.header__content {
+  padding: 30px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.header__content-wrap {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+//  меню навигации  //
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 160%;
+  color: #212353;
+  list-style: none;
+  position: relative;
+  flex: 0 0 90%;
+  a {
+    text-decoration: none;
+  }
+  li {
+    padding: 15px 0;
+  }
+}
+
+.nav a:hover {
+  color: #9c69e2;
+}
+
+.about {
+  margin-right: 47px;
+}
+
+.help {
+  margin-right: 61px;
+  position: relative;
+  transition: all 0.3 ease;
+}
+
+// выпадающее меню  //
+
+.nav li:hover > ul {
+  display: block;
+  transition: all 0.3 ease;
+}
+
+// фиксированная стрелка вниз //
+
+#help:hover > .help::before {
+  top: 25%;
+  background: url(../img/arrow-small-up.svg) no-repeat;
+  transition: all 0.3 ease;
+}
+
+// стили выпадающего окна //
+
+.drop__menu {
+  position: absolute;
+  top: 100%;
+  left: 37%;
+  transition: all 0.3 ease;
+  padding: 12px 17px 12px 24px;
+  background: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  border: 1px solid #9c69e2;
+  list-style: none;
+  display: none;
+}
+
+// стили сылок выпадающего окна //
+
+.drop__menu > li {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 220%;
+  color: #212353;
+  padding: 0;
+  transition: all 0.4 ease;
+}
+
+//  ссылка выпадающего окна //
+
+.drop__menu::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -10px;
+  left: 63px;
+  background: #fff;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #9c69e2;
+  z-index: 1;
+  transform: rotateZ(45deg);
+  border-bottom: #fff 1px solid;
+  border-right: #fff 1px solid;
+  transition: all 0.3 ease;
+}
+
+//  сслыка на выпадающее окно //
+
+.help::before {
+  content: "";
+  position: absolute;
+  background: url(../img/arrow-small-down.svg) no-repeat;
+  display: block;
+  top: 45%;
+  left: 116%;
+  width: 10.25px;
+  height: 10px;
+  transition: all 0.5 ease;
+}
+
+
+
+
+
+
+
+
+// навигация бургера //
+
+.nav__burger-wrap {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 355px;
+  top: 10%;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.15);
+  z-index: 5;
+   
+}
+
+.nav__burger {
+  position: absolute;
+  top: 0;
+  left: 0%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 160%;
+  color: #212353;
+  list-style: none;
+  position: relative;
+  flex: 0 0 90%;
+  border-top: 1px solid #d6b9ff;
+
+
+  li {
+    text-decoration: none;
+    width: 100%;
+    border-bottom: 0px solid #d6b9ff;
+  }
+}
+
+
+
+//  слили ссылок для всех //
+
+
+
+.nav__burger > li {
+  min-height: 83px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 27px;
+  line-height: 277%;
+  border-bottom: 1px solid #d6b9ff;
+  a {
+    text-decoration: none;
+    padding-left: 32px;
+  }
+}
+
+
+//======  ссылка на выыпадающее окно  ====//
+
+.help__burger {
+  position: relative;
+  display: inline-block;
+  height: 83px;
+  width: 100%;
+  border-bottom: 1px solid #d6b9ff;
+}
+
+.drop__arrow-open {
+  height: 83px;
+  width: 100%;
+}
+
+.drop__arrow-close {
+  height: 83px;
+  width: 100%;
+}
+
+.drop__arrow-open::before {
+  content: "";
+  position: absolute;
+  background: url(../img/arrow-up.svg) no-repeat;
+  display: block;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  width: 19.25px;
+  height: 21px;
+  transition: all 0.5 ease;
+}
+
+.drop__arrow-close::before{
+  display: none;
+  content: "";
+  position: absolute;
+  background: url(../img/arrow-open.svg) no-repeat;
+  display: block;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  width: 20.25px;
+  height: 21px;
+  transition: all 0.5 ease;
+}
+
+
+
+
+//  выпадающее меню //
+
+
+
+
+.drop__menu-burger {
+  display: none;
+  background: #ffffff;
+  list-style: none;
+
+  li {
+    background: #F9F4FF;
+    padding-left: 30px;
+    min-height: 83px;
+  }
+  a {
+    padding-left: 62px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 277%;
+  }
+}
+
+
+
+//=====  кнопка =======//
+
+
+
+.btn__nav-burger {
+  height: 102px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  transition: all .4s;
+}
+
+.btn__burger {
+    padding: 16px 58px 15px 59px;
+    background: #9c69e2;
+    border-radius: 50px;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 160%;
+    color: #ffffff;
+    transition: all .4s ease;
+}
+//  логотип  //
+
+.logo {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 160%;
+  color: #212353;
+}
+
+//  кнопка  //
+
+.btn__menu {
+  padding: 16px 58px 15px 59px;
+  background: #9c69e2;
+  border-radius: 50px;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 160%;
+  color: #ffffff;
+  transition: all .4s ease;
+
+}
+
+
+.btn__menu:hover {
+  background: #b17ff4;
+
+}
+
+.burger {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  transition: all .4s ease;
+}
+
+.burger__statick {
+  width: 36px;
+  height: 24px;
+  cursor: pointer;
+  outline: none;
+  background: url(../img/menu-burger.png);
+  background-size: 100%;
+
+}
+
+.burger__statick:active {
+  transform: rotate(180deg);
+}
+
+.burger__click {
+  width: 27px;
+  height: 27px;
+  cursor: pointer;
+  outline: none;
+  background: url(../img/menu-cross.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.burger__click {
+  transform: rotate(180deg);
+}
